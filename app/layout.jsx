@@ -5,7 +5,7 @@ import { Poppins } from "next/font/google";
 
 const poppins_style = Poppins({
   subsets: ["latin"],
-  weight: ['400' ,'500'],
+  weight: ["400", "500"],
   variable: ["--font-poppins"],
 });
 
@@ -16,7 +16,7 @@ export const metadata = {
 function RootLayout({ children }) {
   return (
     <html lang="">
-      <body className={poppins_style.variable}>
+      <body className={poppins_style.className}>
         <main className="">
           <Nav />
           {children}

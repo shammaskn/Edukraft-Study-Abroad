@@ -8,8 +8,8 @@ const Home = () => {
       <header class="cover-container ">
         <div className="halfdiv">
           <div className="halfdiv-content cmpad">
-            <div className="content font-poppins">Fulfil your Career Ambitions!</div>
-            <div className="poppins">
+            <div className="content ">Fulfil your Career Ambitions!</div>
+            <div className="">
               Lorem ipsum dolor sit amet consectetur. Leo id ac nec cursus
               volutpat nullam congue tincidunt. Sit mus nisi dui ac.Lorem ipsum
               dolor sit amet consectetur. Leo id ac nec cursus volutpat nullam
