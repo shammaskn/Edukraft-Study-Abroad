@@ -1,7 +1,10 @@
 import Nav from "@Components/Nav";
+import 'bootstrap/dist/css/bootstrap.css';
 import "@styles/global.css";
 import Footer from "@Components/footer";
 import { Poppins } from "next/font/google";
+import "@styles/mystyle.css";
+
 
 const poppins_style = Poppins({
   subsets: ["latin"],
