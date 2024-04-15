@@ -92,7 +92,7 @@ const Home = () => {
             <ul className="abtlist">
               <li>
                 <div className="abtbox">
-                  <h3>10 +</h3>
+                  <h3>10+</h3>
                   <p>Years experience helping students find their study find their study abroad destination</p>
                 </div>
               </li>
@@ -104,18 +104,69 @@ const Home = () => {
               </li>
               <li>
                 <div className="abtbox">
-                 <img src="/assets/images/british.png" />
+                  <img src="/assets/images/british.png" />
                   <p>British Council Certified</p>
                 </div>
               </li>
               <li>
                 <div className="abtbox">
-                <img src="/assets/images/oisc.png" />                  
+                  <img src="/assets/images/oisc.png" />
                   <p>OISC Authorized</p>
                 </div>
               </li>
             </ul>
 
+          </div>
+        </div>
+      </div>
+
+
+
+      <div className="we-offer">
+        <div className="container-fluid cmpad py-5">
+          <div className="row abt mt-3">
+            <div className="col-sm-6 flexVcenter">
+
+              <h2 className="mainhead">What we offer?</h2>
+              <p className="">We are here to take your burden and help you achieve your goals without worrying. We have designed our services, keeping your ease and convenience in mind. Our expert and qualified team will provide you with any services that a student can need, from complete advice and guidance about your education options and routs applications, visa services, transportation arrangements and accommodation arrangements if needed.</p>
+
+              <a href="" className="arr">Read More <img src="/assets/icons/arrow.svg" alt="" /> </a>
+
+            </div>
+            <div className="col-sm-6">
+
+
+              <ul className="we-list">
+                <li>
+                  <div className="we-box">
+                    <img src="/assets/icons/f1.svg" alt="" />
+                    <p>Curated selection of programmes from partner Universities</p>
+                  </div>
+                </li>
+                <li>
+                  <div className="we-box">
+                  <img src="/assets/icons/f2.svg" alt="" />
+                    <p>Guidance on choosing courses, countries and universities from experts</p>
+                  </div>
+                </li>
+                <li>
+                  <div className="we-box">
+                  <img src="/assets/icons/f3.svg" alt="" />
+                    <p>IELTS/TOEFL Preparation</p>
+                  </div>
+                </li>
+                <li>
+                  <div className="we-box">
+                  <img src="/assets/icons/f4.svg" alt="" />
+                    <p>Editing and Processing Application Guidelines</p>
+                  </div>
+                </li>
+
+
+              </ul>
+
+
+            </div>
           </div>
         </div>
       </div>
