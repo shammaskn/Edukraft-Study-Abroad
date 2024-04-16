@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import Logo from "../public/assets/icons/logo.svg";
 import Image from "next/image";
 
 const Nav = () => {

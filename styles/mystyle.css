@@ -364,6 +364,68 @@ header {
     margin: auto;
     padding-bottom: 20px;
 }
-.we-box:hover{
+
+.we-box:hover {
     border: 3px solid #eb9c4d;
+}
+
+.study {
+    position: relative;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.study p {
+    position: absolute;
+    width: 100%;
+    background-color: #adadad29;
+    padding: 10px;
+    bottom: 0;
+    margin-bottom: 0;
+    text-align: center;
+    backdrop-filter: blur(2px);
+    color: white;
+}
+
+.testimonials {
+    background-color: rgba(39, 48, 105, 0.1);
+}
+
+.testi-img {
+    position: relative;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.testi-img::before {
+    content: '';
+    position: absolute;
+    background-color: #00000047;
+    inset: 0;
+}
+
+.testi-img p {
+    position: absolute;
+    margin-bottom: 0;
+    z-index: 9;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    padding: 13px 0;
+    /* background-color: #975151; */
+    /* color: #250d0d; */
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+}
+
+.play {
+    position: absolute;
+    width: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);   
+}
+.testipara{
+    line-height: 30px;
 }

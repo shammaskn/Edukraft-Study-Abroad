@@ -86,7 +86,7 @@ const Home = () => {
         <div className="row">
           <div className="col-sm-12">
             <h1 className="mainhead">Hello, We Are Edukraft</h1>
-            <p className="subpara pb-5">Your Trusted Learning Partner</p>
+            <p className="subpara pb-3">Your Trusted Learning Partner</p>
 
 
             <ul className="abtlist">
@@ -145,19 +145,19 @@ const Home = () => {
                 </li>
                 <li>
                   <div className="we-box">
-                  <img src="/assets/icons/f2.svg" alt="" />
+                    <img src="/assets/icons/f2.svg" alt="" />
                     <p>Guidance on choosing courses, countries and universities from experts</p>
                   </div>
                 </li>
                 <li>
                   <div className="we-box">
-                  <img src="/assets/icons/f3.svg" alt="" />
+                    <img src="/assets/icons/f3.svg" alt="" />
                     <p>IELTS/TOEFL Preparation</p>
                   </div>
                 </li>
                 <li>
                   <div className="we-box">
-                  <img src="/assets/icons/f4.svg" alt="" />
+                    <img src="/assets/icons/f4.svg" alt="" />
                     <p>Editing and Processing Application Guidelines</p>
                   </div>
                 </li>
@@ -170,6 +170,245 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+
+
+
+
+      <div className="container-fluid cmpad py-5">
+        <div className="row">
+          <div className="col-sm-12">
+            <h1 className="mainhead">Top Study Destinations</h1>
+            <p className="subpara pb-3">Our partnerships extend to more than 100 prestigious educational institutions across five countries.</p>
+
+
+            <Swiper
+              slidesPerView={3}
+              spaceBetween={30}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              speed={1500}
+              loop={true}
+              modules={[EffectFade, Pagination, Autoplay]}
+            >
+              <SwiperSlide>
+                <div className="study">
+                  <img src="assets/study/uk.jpg" alt="" />
+                  <p>United Kingdom</p>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="study">
+                  <img src="assets/study/ireland.jpg" alt="" />
+                  <p>Ireland</p>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="study">
+                  <img src="assets/study/germany.jpg" alt="" />
+                  <p>Germany</p>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="study">
+                  <img src="assets/study/germany.jpg" alt="" />
+                  <p>Germany</p>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="study">
+                  <img src="assets/study/uk.jpg" alt="" />
+                  <p>United Kingdom</p>
+                </div>
+              </SwiperSlide>
+            </Swiper>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div className="container-fluid cmpad py-5">
+        <div className="row">
+          <div className="col-sm-12">
+            <h1 className="mainhead pb-3">Discover Top Rated Universities</h1>
+
+
+            <Swiper
+              slidesPerView={3}
+              spaceBetween={30}
+              autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+              }}
+              speed={2000}
+              loop={true}
+              modules={[EffectFade, Pagination, Autoplay]}
+            >
+              <SwiperSlide>
+                <div className="study">
+                  <img src="assets/university/coventry.jpg" alt="" />
+                  <p>University of Coventry</p>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="study">
+                  <img src="assets/university/lincoln.jpg" alt="" />
+                  <p>University of Lincoln</p>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="study">
+                  <img src="assets/university/chester.jpg" alt="" />
+                  <p>University of Chester</p>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="study">
+                  <img src="assets/university/coventry.jpg" alt="" />
+                  <p>University of Coventry</p>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="study">
+                  <img src="assets/university/lincoln.jpg" alt="" />
+                  <p>University of Lincoln</p>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="study">
+                  <img src="assets/university/chester.jpg" alt="" />
+                  <p>University of Chester</p>
+                </div>
+              </SwiperSlide>
+
+            </Swiper>
+
+          </div>
+          <div className="col-sm-12 mt-5 d-flex justify-content-end">
+            <a href="" className="bttn">Explore More</a>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div className="testimonials">
+        <div className="container-fluid cmpad py-5">
+          <div className="row">
+            <div className="col-sm-12">
+              <h1 className="mainhead pb-3">Hear from Our Students!</h1>
+
+
+              <Swiper
+                slidesPerView={1}
+                spaceBetween={30}
+                autoplay={{
+                  delay: 1300,
+                  disableOnInteraction: false,
+                }}
+                // effect={'fade'}
+                speed={2300}
+                loop={true}
+                modules={[EffectFade, Pagination, Autoplay]}
+              >
+                <SwiperSlide>
+                  <div className="row">
+                    <div className="col-sm-6">
+                      <div className="testi-img">
+                        <img src="assets/testimonials/testi1.jpg" alt="" />
+
+                        <img src="assets/icons/play.svg" alt="" className="play" />
+
+                        <p>Zerin, UK</p>
+                      </div>
+                    </div>
+                    <div className="col-sm-6 flexVcenter">
+                      <p className="testipara">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”</p>
+                      <h6>-Zerin, UK</h6>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="row">
+                    <div className="col-sm-6">
+                      <div className="testi-img">
+                        <img src="assets/testimonials/testi1.jpg" alt="" />
+
+                        <img src="assets/icons/play.svg" alt="" className="play" />
+
+                        <p>Zerin, UK</p>
+                      </div>
+                    </div>
+                    <div className="col-sm-6 flexVcenter">
+                      <p className="testipara">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”</p>
+                      <h6>-Zerin, UK</h6>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="row">
+                    <div className="col-sm-6">
+                      <div className="testi-img">
+                        <img src="assets/testimonials/testi1.jpg" alt="" />
+
+                        <img src="assets/icons/play.svg" alt="" className="play" />
+
+                        <p>Zerin, UK</p>
+                      </div>
+                    </div>
+                    <div className="col-sm-6 flexVcenter">
+                      <p className="testipara">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”</p>
+                      <h6>-Zerin, UK</h6>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="row">
+                    <div className="col-sm-6">
+                      <div className="testi-img">
+                        <img src="assets/testimonials/testi1.jpg" alt="" />
+
+                        <img src="assets/icons/play.svg" alt="" className="play" />
+
+                        <p>Zerin, UK</p>
+                      </div>
+                    </div>
+                    <div className="col-sm-6 flexVcenter">
+                      <p className="testipara">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”</p>
+                      <h6>-Zerin, UK</h6>
+                    </div>
+                  </div>
+                </SwiperSlide>
+
+              </Swiper>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+        <div className="container-fluid cmpad py-5">
+          <div className="row">
+            <div className="col-sm-12">
+              <h1 className="mainhead pb-3">We will support you every step of the way</h1>
+
+
+              
+
+            </div>
+
+          </div>
+        </div>
+      
 
 
 
