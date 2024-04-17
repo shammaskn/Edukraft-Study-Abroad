@@ -396,19 +396,222 @@ const Home = () => {
 
 
 
+      <div className="container-fluid cmpad py-5">
+        <div className="row">
+          <div className="col-sm-12">
+            <h1 className="mainhead pb-3">We will support you every step of the way</h1>
+
+            <ul className="sprt-list">
+              <li>
+                <div className="sprtbak" style={{ backgroundImage: `url(../assets/images/sprtbak1.jpg)` }}>
+                  <div className="sprtcon">
+                    <img src="/assets/icons/sprt1.svg" alt="" />
+                    <p>Partnering with your school</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div className="sprtbak" style={{ backgroundImage: `url(../assets/images/sprtbak1.jpg)` }}>
+                  <div className="sprtcon">
+                    <img src="/assets/icons/sprt2.svg" alt="" />
+                    <p>Selecting the Right Program</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div className="sprtbak" style={{ backgroundImage: `url(../assets/images/sprtbak1.jpg)` }}>
+                  <div className="sprtcon">
+                    <img src="/assets/icons/sprt3.svg" alt="" />
+                    <p>Applying and the Process</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div className="sprtbak" style={{ backgroundImage: `url(../assets/images/sprtbak1.jpg)` }}>
+                  <div className="sprtcon">
+                    <img src="/assets/icons/sprt4.svg" alt="" />
+                    <p>Funding and Scholarships</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div className="sprtbak" style={{ backgroundImage: `url(../assets/images/sprtbak1.jpg)` }}>
+                  <div className="sprtcon">
+                    <img src="/assets/icons/sprt5.svg" alt="" />
+                    <p>Preparing for your adventure</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+
+
+      <div className="container-fluid cmpad py-5 insta">
+        <div className="row">
+          <div className="col-sm-12">
+            <h1 className="mainhead pb-3">Check out our Instagram page</h1>
+
+
+            <Swiper
+              slidesPerView={4}
+              spaceBetween={10}
+              // autoplay={{
+              //   delay: 1300,
+              //   disableOnInteraction: false,
+              // }}
+              // effect={'fade'}
+              speed={2300}
+              loop={true}
+              modules={[EffectFade, Pagination, Autoplay]}
+            >
+              <SwiperSlide>
+                <div className="instabx">
+                  <img src="/assets/images/in1.png" alt="" />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="instabx">
+                  <img src="/assets/images/in2.jpg" alt="" />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="instabx">
+                  <img src="/assets/images/in3.jpg" alt="" />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="instabx">
+                  <img src="/assets/images/in1.png" alt="" />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="instabx">
+                  <img src="/assets/images/in2.jpg" alt="" />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="instabx">
+                  <img src="/assets/images/in3.jpg" alt="" />
+                </div>
+              </SwiperSlide>
+
+
+            </Swiper>
+
+          </div>
+
+        </div>
+      </div>
+
+
+
+      <div className="testimonials">
         <div className="container-fluid cmpad py-5">
           <div className="row">
             <div className="col-sm-12">
-              <h1 className="mainhead pb-3">We will support you every step of the way</h1>
+              <h1 className="mainhead pb-3">Upcoming Events</h1>
 
 
-              
+              <Swiper
+                slidesPerView={2}
+                spaceBetween={10}
+                autoplay={{
+                  delay: 1300,
+                  disableOnInteraction: false,
+                }}
+                // effect={'fade'}
+                speed={2300}
+                loop={true}
+                modules={[EffectFade, Pagination, Autoplay]}
+              >
+                <SwiperSlide>
+                  <div className="news-bx" style={{ backgroundImage: `url('assets/images/news.jpg')` }}>
+
+                    <div className="news-con">
+                      <h3>
+                        21 Mar
+                      </h3>
+                      <p>India
+                        06:30 pm - 07:30 pm
+                        United Kingdom
+                        01:00 pm - 02:00 pm </p>
+                      <p>Study Nursing in UK</p>
+                      <a href="" className="bttn">Register</a>
+                    </div>
+
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="news-bx" style={{ backgroundImage: `url('assets/images/news.jpg')` }}>
+
+                    <div className="news-con">
+                      <h3>
+                        21 Mar
+                      </h3>
+                      <p>India
+                        06:30 pm - 07:30 pm
+                        United Kingdom
+                        01:00 pm - 02:00 pm </p>
+                      <p>Study Nursing in UK</p>
+                      <a href="" className="bttn">Register</a>
+                    </div>
+
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="news-bx" style={{ backgroundImage: `url('assets/images/news.jpg')` }}>
+
+                    <div className="news-con">
+                      <h3>
+                        21 Mar
+                      </h3>
+                      <p>India
+                        06:30 pm - 07:30 pm
+                        United Kingdom
+                        01:00 pm - 02:00 pm </p>
+                      <p>Study Nursing in UK</p>
+                      <a href="" className="bttn">Register</a>
+                    </div>
+
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="news-bx" style={{ backgroundImage: `url('assets/images/news.jpg')` }}>
+
+                    <div className="news-con">
+                      <h3>
+                        21 Mar
+                      </h3>
+                      <p>India
+                        06:30 pm - 07:30 pm
+                        United Kingdom
+                        01:00 pm - 02:00 pm </p>
+                      <p>Study Nursing in UK</p>
+                      <a href="" className="bttn">Register</a>
+                    </div>
+
+                  </div>
+                </SwiperSlide>
+
+
+              </Swiper>
 
             </div>
 
           </div>
         </div>
-      
+      </div>
+
+
 
 
 

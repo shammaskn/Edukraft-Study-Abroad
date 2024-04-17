@@ -274,7 +274,7 @@ header {
 .abtlist .abtbox:hover {
     transform: translateY(-3px);
     box-shadow: rgba(0, 0, 0, 0.185) 0px 25px 20px -20px;
-    border: 1px solid #eea82240;
+    /* border: 1px solid #eea82240; */
 }
 
 
@@ -428,4 +428,92 @@ header {
 }
 .testipara{
     line-height: 30px;
+}
+
+.sprt-list{
+    display: flex;
+    flex-flow: wrap;
+    margin: -10px;
+}
+.sprt-list li{
+    flex: 1 0 calc( 100% / 5);
+    max-width: calc( 100% / 5);
+    padding: 10px;
+}
+.sprtbak{
+    min-height: 350px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: center;
+    border-radius: .5rem;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.sprtbak::before{
+    content: '';
+    position: absolute;
+    background-color: rgb(52, 58, 102);
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transition: .3s;
+    opacity: 1;
+}
+.sprtbak:hover::before{
+    opacity: .8;
+}
+.sprtcon{
+    position: relative;
+    z-index: 9;
+}
+
+
+.sprtbak img{
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    padding-bottom: 20px;
+    object-fit: contain;
+}
+.sprtbak p{
+    text-align: center;
+    color: #ffffffe0;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+}
+.instabx{
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0px 0px 4px #00000017;
+}
+.insta .swiper-wrapper{
+    margin: 15px 0;
+}
+.news-bx{
+    min-height: 300px;
+    background-position: center;
+    background-size: cover;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+    
+}
+
+.news-con{
+    max-width: 300px;
+    background-color: rgba(50, 55, 95, 0.7);
+    min-height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-flow: column;
+    justify-content: center;
+    padding: 20px;
+    border-radius: .5rem;
+    color: white;
 }
