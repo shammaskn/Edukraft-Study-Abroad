@@ -4,30 +4,28 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Nav = () => {
-  const [open, setOpen] = useState(false);
+
   const [scrolled, setScrolled] = useState(false);
 
-  const toggleDropdown = () => {
-    setOpen(!open);
-  };
-
-  const handleScroll = () => {
-    setScrolled(window.scrollY > 0);
-  };
-
   useEffect(() => {
-    // Attach the scroll event listener when the component mounts
-    window.addEventListener("scroll", handleScroll);
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 0;
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled);
+      }
     };
-  }, []);
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [scrolled]);
+
   return (
     <>
 
-      <header>
+      <header className={scrolled ? 'scrolled' : ''}>
         <div className="container-fluid cmpad">
           <div className="headmain">
             <div className="logocol">

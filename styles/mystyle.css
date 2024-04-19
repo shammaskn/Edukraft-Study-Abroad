@@ -91,6 +91,22 @@ input {
 
 
 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #4e4e4e; 
+  }
+
+
 @media(min-width: 1366px) {
     .cmpad {
         max-width: 1526.4px !important;
@@ -132,8 +148,16 @@ input {
 
 header {
     position: fixed;
-    z-index: 9;
+    z-index: 99;
     width: 100%;
+    transition: .3s;
+}
+header.scrolled{
+    background-color: white;
+    box-shadow: 0px 0px 20px #00000014;
+}
+header.scrolled .logocol {
+    width: 150px;
 }
 
 .headmain {
@@ -143,6 +167,7 @@ header {
 
 .logocol {
     width: 230px;
+    transition: .3s;
 }
 
 .menucol {
@@ -304,12 +329,12 @@ header {
 }
 
 .we-offer h2 {
-    color: rgba(255, 255, 255, 0.932);
+    color: rgb(255 255 255 / 90%);
     text-align: left;
 }
 
 .we-offer p {
-    color: rgba(255, 255, 255, 0.842);
+    color: rgb(255 255 255 / 85%);
 }
 
 .abt {
@@ -373,6 +398,11 @@ header {
     position: relative;
     border-radius: .5rem;
     overflow: hidden;
+    transition: .3s;
+    cursor: pointer;
+}
+.study:hover img{
+    transform: scale(1.1);
 }
 
 .study p {
@@ -516,4 +546,72 @@ header {
     padding: 20px;
     border-radius: .5rem;
     color: white;
+}
+
+footer{
+    display: flex;
+}
+
+.foot-list{
+    display: flex;
+}
+.foot-left{
+    padding: 40px;
+    width: 300px;
+    background-color: rgba(240, 240, 240, 1);
+    display: flex;
+}
+.foot-right{
+    width: calc( 100% - 300px );
+    background-color: rgba(39, 48, 105, 1);
+    padding: 3rem 4rem;
+}
+.foot-list h5{
+    color: rgb(255 255 255 / 90%);
+    font-size: 1rem;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+.foot-list li{
+    padding-bottom: 10px;
+}
+.foot-list li:last-child{
+    padding-bottom: 0;
+}
+.foot-list li a,.foot-list p,.foot-list a{
+    font-size: .9rem;
+    color: rgb(255 255 255 / 70%);
+    transition: .3s;    
+}
+.foot-list p{
+    margin-bottom: 0;
+    padding-bottom: 10px;
+}
+
+.foot-list li a:hover,.foot-list a:hover{
+    color: rgb(255 255 255 / 90%);
+}
+.social-list{
+    display: flex;
+    gap: 10px;
+}
+
+
+.swiper-button-prev, .swiper-button-next {
+    color: white;
+    height: 40px !important;
+    width: 40px !important;
+    background: rgb(255, 255, 255) !important;
+    border-radius: 50px !important;
+    transition: .3s;
+}
+.swiper-button-prev:after, .swiper-button-next:after {
+    font-size: 1rem !important;
+    color: #333 !important;
+}
+.swiper-button-prev:hover, .swiper-button-next:hover{
+    background-color: #eea822 !important;
+}
+.swiper-button-prev:hover:after, .swiper-button-next:hover:after {    
+    color: #ffffff !important;
 }

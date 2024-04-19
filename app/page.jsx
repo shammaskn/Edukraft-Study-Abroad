@@ -3,18 +3,20 @@ import Image from "next/image";
 import Nav from "@Components/Nav";
 import Section from "@Components/section";
 // core version + navigation, pagination modules:
-import { Autoplay, Pagination, EffectFade } from 'swiper/modules';
+import { Autoplay, Pagination, EffectFade, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from "swiper/react";
 // import Swiper and modules styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
+import 'swiper/css/navigation';
+
+import React, { useState, useEffect } from 'react';
 
 
 
 
 const Home = () => {
-
 
 
   return (
@@ -185,13 +187,15 @@ const Home = () => {
             <Swiper
               slidesPerView={3}
               spaceBetween={30}
-              autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-              }}
+              // autoplay={{
+              //   delay: 2500,
+              //   disableOnInteraction: false,
+              // }}
               speed={1500}
               loop={true}
-              modules={[EffectFade, Pagination, Autoplay]}
+              navigation={true}
+              modules={[Autoplay, Navigation]}
+
             >
               <SwiperSlide>
                 <div className="study">
@@ -245,7 +249,9 @@ const Home = () => {
               }}
               speed={2000}
               loop={true}
-              modules={[EffectFade, Pagination, Autoplay]}
+              navigation={true}
+              modules={[Autoplay, Navigation]}
+
             >
               <SwiperSlide>
                 <div className="study">
@@ -464,14 +470,15 @@ const Home = () => {
             <Swiper
               slidesPerView={4}
               spaceBetween={10}
-              // autoplay={{
-              //   delay: 1300,
-              //   disableOnInteraction: false,
-              // }}
+              autoplay={{
+                delay: 1000,
+                disableOnInteraction: false,
+              }}
               // effect={'fade'}
-              speed={2300}
+              speed={2500}
               loop={true}
-              modules={[EffectFade, Pagination, Autoplay]}
+              navigation={true}
+              modules={[Autoplay, Navigation]}
             >
               <SwiperSlide>
                 <div className="instabx">
@@ -531,7 +538,8 @@ const Home = () => {
                 // effect={'fade'}
                 speed={2300}
                 loop={true}
-                modules={[EffectFade, Pagination, Autoplay]}
+                navigation={true}
+                modules={[Autoplay, Navigation]}
               >
                 <SwiperSlide>
                   <div className="news-bx" style={{ backgroundImage: `url('assets/images/news.jpg')` }}>
