@@ -185,12 +185,13 @@ const Home = () => {
 
 
             <Swiper
-              slidesPerView={3}
+              slidesPerView={2.5}
               spaceBetween={30}
-              // autoplay={{
-              //   delay: 2500,
-              //   disableOnInteraction: false,
-              // }}
+              centeredSlides={true}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
               speed={1500}
               loop={true}
               navigation={true}
@@ -241,8 +242,9 @@ const Home = () => {
 
 
             <Swiper
-              slidesPerView={3}
+              slidesPerView={2.5}
               spaceBetween={30}
+              centeredSlides={true}
               autoplay={{
                 delay: 2000,
                 disableOnInteraction: false,
@@ -468,12 +470,13 @@ const Home = () => {
 
 
             <Swiper
-              slidesPerView={4}
-              spaceBetween={10}
+              slidesPerView={3.9}
+              spaceBetween={15}
               autoplay={{
                 delay: 1000,
                 disableOnInteraction: false,
               }}
+              centeredSlides={true}
               // effect={'fade'}
               speed={2500}
               loop={true}
@@ -528,15 +531,18 @@ const Home = () => {
               <h1 className="mainhead pb-3">Upcoming Events</h1>
 
 
+              <div className="swiper-container">
+
               <Swiper
-                slidesPerView={2}
-                spaceBetween={10}
+                slidesPerView={2.5}
+                spaceBetween={0}
                 autoplay={{
-                  delay: 1300,
+                  delay: 1500,
                   disableOnInteraction: false,
                 }}
+                centeredSlides={true}
                 // effect={'fade'}
-                speed={2300}
+                speed={2500}
                 loop={true}
                 navigation={true}
                 modules={[Autoplay, Navigation]}
@@ -609,9 +615,81 @@ const Home = () => {
 
                   </div>
                 </SwiperSlide>
+                <SwiperSlide>
+                  <div className="news-bx" style={{ backgroundImage: `url('assets/images/news.jpg')` }}>
+
+                    <div className="news-con">
+                      <h3>
+                        21 Mar
+                      </h3>
+                      <p>India
+                        06:30 pm - 07:30 pm
+                        United Kingdom
+                        01:00 pm - 02:00 pm </p>
+                      <p>Study Nursing in UK</p>
+                      <a href="" className="bttn">Register</a>
+                    </div>
+
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="news-bx" style={{ backgroundImage: `url('assets/images/news.jpg')` }}>
+
+                    <div className="news-con">
+                      <h3>
+                        21 Mar
+                      </h3>
+                      <p>India
+                        06:30 pm - 07:30 pm
+                        United Kingdom
+                        01:00 pm - 02:00 pm </p>
+                      <p>Study Nursing in UK</p>
+                      <a href="" className="bttn">Register</a>
+                    </div>
+
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="news-bx" style={{ backgroundImage: `url('assets/images/news.jpg')` }}>
+
+                    <div className="news-con">
+                      <h3>
+                        21 Mar
+                      </h3>
+                      <p>India
+                        06:30 pm - 07:30 pm
+                        United Kingdom
+                        01:00 pm - 02:00 pm </p>
+                      <p>Study Nursing in UK</p>
+                      <a href="" className="bttn">Register</a>
+                    </div>
+
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="news-bx" style={{ backgroundImage: `url('assets/images/news.jpg')` }}>
+
+                    <div className="news-con">
+                      <h3>
+                        21 Mar
+                      </h3>
+                      <p>India
+                        06:30 pm - 07:30 pm
+                        United Kingdom
+                        01:00 pm - 02:00 pm </p>
+                      <p>Study Nursing in UK</p>
+                      <a href="" className="bttn">Register</a>
+                    </div>
+
+                  </div>
+                </SwiperSlide>
 
 
               </Swiper>
+              
+              </div>
+
+              
 
             </div>
 

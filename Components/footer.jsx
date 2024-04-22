@@ -77,6 +77,11 @@ const footer = () => {
             </div>
           </div>
         </div>
+
+<div className="wha">
+  <img src="/assets/icons/whatsapp.svg" alt="" />
+</div>
+
       </footer>
 
     </>
