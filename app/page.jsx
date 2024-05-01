@@ -26,9 +26,9 @@ const Home = () => {
         <Swiper
           spaceBetween={30}
           effect={'fade'}
-          pagination={{
-            clickable: true,
-          }}
+          // pagination={{
+          //   clickable: true,
+          // }}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
@@ -42,7 +42,7 @@ const Home = () => {
             <div className="slideimg" style={{ backgroundImage: `url(/assets/slider/slide1.jpg)` }}>
               <div className="row">
                 <div className="col-sm-6"></div>
-                <div className="col-sm-6 cmpad">
+                <div className="col-sm-12 col-md-6 cmpad">
                   <div className="slidercon">
                     <h2>Fulfil your Career Ambitions!</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, dolore? Similique temporibus porro dolorum minus quae et laborum aperiam natus cupiditate, sapiente, aliquid animi, atque ex! Unde consequuntur quasi voluptatem?</p>
@@ -56,7 +56,7 @@ const Home = () => {
             <div className="slideimg" style={{ backgroundImage: `url(/assets/slider/slide2.jpg)` }}>
               <div className="row">
                 <div className="col-sm-6"></div>
-                <div className="col-sm-6 cmpad">
+                <div className="col-sm-12 col-md-6 cmpad">
                   <div className="slidercon">
                     <h2>95% of our students got admission in less than 14 days</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, dolore? Similique temporibus porro dolorum minus quae et laborum aperiam natus cupiditate, sapiente, aliquid animi, atque ex! Unde consequuntur quasi voluptatem?</p>
@@ -70,7 +70,7 @@ const Home = () => {
             <div className="slideimg" style={{ backgroundImage: `url(/assets/slider/slide3.jpg)` }}>
               <div className="row">
                 <div className="col-sm-6"></div>
-                <div className="col-sm-6 cmpad">
+                <div className="col-sm-12 col-md-6 cmpad">
                   <div className="slidercon">
                     <h2>Turn your dream of studying abroad a reality</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, dolore? Similique temporibus porro dolorum minus quae et laborum aperiam natus cupiditate, sapiente, aliquid animi, atque ex! Unde consequuntur quasi voluptatem?</p>
@@ -127,7 +127,7 @@ const Home = () => {
       <div className="we-offer">
         <div className="container-fluid cmpad py-5">
           <div className="row abt mt-3">
-            <div className="col-sm-6 flexVcenter">
+            <div className="col-xl-6 mb-3 mb-xl-0 flexVcenter">
 
               <h2 className="mainhead">What we offer?</h2>
               <p className="">We are here to take your burden and help you achieve your goals without worrying. We have designed our services, keeping your ease and convenience in mind. Our expert and qualified team will provide you with any services that a student can need, from complete advice and guidance about your education options and routs applications, visa services, transportation arrangements and accommodation arrangements if needed.</p>
@@ -135,7 +135,7 @@ const Home = () => {
               <a href="" className="arr">Read More <img src="/assets/icons/arrow.svg" alt="" /> </a>
 
             </div>
-            <div className="col-sm-6">
+            <div className="col-xl-6">
 
 
               <ul className="we-list">
@@ -185,17 +185,35 @@ const Home = () => {
 
 
             <Swiper
-              slidesPerView={2.5}
+
               spaceBetween={30}
               centeredSlides={true}
               autoplay={{
                 delay: 2500,
                 disableOnInteraction: false,
               }}
+
+              breakpoints={{
+
+
+                1200: {
+                  slidesPerView: 2.5,
+                },
+                425: {
+                  slidesPerView: 2,
+                },
+                0: {
+                  slidesPerView: 1,
+                },
+              }}
+
+
               speed={1500}
               loop={true}
               navigation={true}
               modules={[Autoplay, Navigation]}
+
+
 
             >
               <SwiperSlide>
@@ -253,6 +271,19 @@ const Home = () => {
               loop={true}
               navigation={true}
               modules={[Autoplay, Navigation]}
+              breakpoints={{
+
+
+                1200: {
+                  slidesPerView: 2.5,
+                },
+                425: {
+                  slidesPerView: 2,
+                },
+                0: {
+                  slidesPerView: 1,
+                },
+              }}
 
             >
               <SwiperSlide>
@@ -325,7 +356,7 @@ const Home = () => {
               >
                 <SwiperSlide>
                   <div className="row">
-                    <div className="col-sm-6">
+                    <div className="col-md-6 mb-3 mb-md-0">
                       <div className="testi-img">
                         <img src="assets/testimonials/testi1.jpg" alt="" />
 
@@ -334,7 +365,7 @@ const Home = () => {
                         <p>Zerin, UK</p>
                       </div>
                     </div>
-                    <div className="col-sm-6 flexVcenter">
+                    <div className="col-md-6 flexVcenter">
                       <p className="testipara">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”</p>
                       <h6>-Zerin, UK</h6>
                     </div>
@@ -342,7 +373,7 @@ const Home = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="row">
-                    <div className="col-sm-6">
+                    <div className="col-md-6 mb-3 mb-md-0">
                       <div className="testi-img">
                         <img src="assets/testimonials/testi1.jpg" alt="" />
 
@@ -351,7 +382,7 @@ const Home = () => {
                         <p>Zerin, UK</p>
                       </div>
                     </div>
-                    <div className="col-sm-6 flexVcenter">
+                    <div className="col-md-6 flexVcenter">
                       <p className="testipara">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”</p>
                       <h6>-Zerin, UK</h6>
                     </div>
@@ -359,7 +390,7 @@ const Home = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="row">
-                    <div className="col-sm-6">
+                    <div className="col-md-6 mb-3 mb-md-0">
                       <div className="testi-img">
                         <img src="assets/testimonials/testi1.jpg" alt="" />
 
@@ -368,7 +399,7 @@ const Home = () => {
                         <p>Zerin, UK</p>
                       </div>
                     </div>
-                    <div className="col-sm-6 flexVcenter">
+                    <div className="col-md-6 flexVcenter">
                       <p className="testipara">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”</p>
                       <h6>-Zerin, UK</h6>
                     </div>
@@ -376,7 +407,7 @@ const Home = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="row">
-                    <div className="col-sm-6">
+                    <div className="col-md-6 mb-3 mb-md-0">
                       <div className="testi-img">
                         <img src="assets/testimonials/testi1.jpg" alt="" />
 
@@ -385,7 +416,7 @@ const Home = () => {
                         <p>Zerin, UK</p>
                       </div>
                     </div>
-                    <div className="col-sm-6 flexVcenter">
+                    <div className="col-md-6 flexVcenter">
                       <p className="testipara">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”</p>
                       <h6>-Zerin, UK</h6>
                     </div>
@@ -470,7 +501,7 @@ const Home = () => {
 
 
             <Swiper
-              slidesPerView={3.9}
+
               spaceBetween={15}
               autoplay={{
                 delay: 1000,
@@ -482,6 +513,28 @@ const Home = () => {
               loop={true}
               navigation={true}
               modules={[Autoplay, Navigation]}
+
+              breakpoints={{
+
+
+                1200: {
+                  slidesPerView: 3.9,
+                },
+                991: {
+                  slidesPerView: 3,
+                },
+                575: {
+                  slidesPerView: 2,
+                },
+                425: {
+                  slidesPerView: 2,
+                },
+                0: {
+                  slidesPerView: 1,
+                },
+              }}
+
+
             >
               <SwiperSlide>
                 <div className="instabx">
@@ -533,163 +586,180 @@ const Home = () => {
 
               <div className="swiper-container">
 
-              <Swiper
-                slidesPerView={2.5}
-                spaceBetween={0}
-                autoplay={{
-                  delay: 1500,
-                  disableOnInteraction: false,
-                }}
-                centeredSlides={true}
-                // effect={'fade'}
-                speed={2500}
-                loop={true}
-                navigation={true}
-                modules={[Autoplay, Navigation]}
-              >
-                <SwiperSlide>
-                  <div className="news-bx" style={{ backgroundImage: `url('assets/images/news.jpg')` }}>
+                <Swiper
 
-                    <div className="news-con">
-                      <h3>
-                        21 Mar
-                      </h3>
-                      <p>India
-                        06:30 pm - 07:30 pm
-                        United Kingdom
-                        01:00 pm - 02:00 pm </p>
-                      <p>Study Nursing in UK</p>
-                      <a href="" className="bttn">Register</a>
+                  spaceBetween={0}
+                  autoplay={{
+                    delay: 1500,
+                    disableOnInteraction: false,
+                  }}
+                  centeredSlides={true}
+                  // effect={'fade'}
+                  speed={2500}
+                  loop={true}
+                  navigation={true}
+                  modules={[Autoplay, Navigation]}
+
+                  breakpoints={{
+
+
+                    1200: {
+                      slidesPerView: 2.5,
+                    },
+                    767: {
+                      slidesPerView: 2,
+                    },
+                    425: {
+                      slidesPerView: 2,
+                    },
+                    0: {
+                      slidesPerView: 1,
+                    },
+                  }}
+                >
+                  <SwiperSlide>
+                    <div className="news-bx" style={{ backgroundImage: `url('assets/images/news.jpg')` }}>
+
+                      <div className="news-con">
+                        <h3>
+                          21 Mar
+                        </h3>
+                        <p>India
+                          06:30 pm - 07:30 pm
+                          United Kingdom
+                          01:00 pm - 02:00 pm </p>
+                        <p>Study Nursing in UK</p>
+                        <a href="" className="bttn">Register</a>
+                      </div>
+
                     </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className="news-bx" style={{ backgroundImage: `url('assets/images/news.jpg')` }}>
 
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="news-bx" style={{ backgroundImage: `url('assets/images/news.jpg')` }}>
+                      <div className="news-con">
+                        <h3>
+                          21 Mar
+                        </h3>
+                        <p>India
+                          06:30 pm - 07:30 pm
+                          United Kingdom
+                          01:00 pm - 02:00 pm </p>
+                        <p>Study Nursing in UK</p>
+                        <a href="" className="bttn">Register</a>
+                      </div>
 
-                    <div className="news-con">
-                      <h3>
-                        21 Mar
-                      </h3>
-                      <p>India
-                        06:30 pm - 07:30 pm
-                        United Kingdom
-                        01:00 pm - 02:00 pm </p>
-                      <p>Study Nursing in UK</p>
-                      <a href="" className="bttn">Register</a>
                     </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className="news-bx" style={{ backgroundImage: `url('assets/images/news.jpg')` }}>
 
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="news-bx" style={{ backgroundImage: `url('assets/images/news.jpg')` }}>
+                      <div className="news-con">
+                        <h3>
+                          21 Mar
+                        </h3>
+                        <p>India
+                          06:30 pm - 07:30 pm
+                          United Kingdom
+                          01:00 pm - 02:00 pm </p>
+                        <p>Study Nursing in UK</p>
+                        <a href="" className="bttn">Register</a>
+                      </div>
 
-                    <div className="news-con">
-                      <h3>
-                        21 Mar
-                      </h3>
-                      <p>India
-                        06:30 pm - 07:30 pm
-                        United Kingdom
-                        01:00 pm - 02:00 pm </p>
-                      <p>Study Nursing in UK</p>
-                      <a href="" className="bttn">Register</a>
                     </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className="news-bx" style={{ backgroundImage: `url('assets/images/news.jpg')` }}>
 
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="news-bx" style={{ backgroundImage: `url('assets/images/news.jpg')` }}>
+                      <div className="news-con">
+                        <h3>
+                          21 Mar
+                        </h3>
+                        <p>India
+                          06:30 pm - 07:30 pm
+                          United Kingdom
+                          01:00 pm - 02:00 pm </p>
+                        <p>Study Nursing in UK</p>
+                        <a href="" className="bttn">Register</a>
+                      </div>
 
-                    <div className="news-con">
-                      <h3>
-                        21 Mar
-                      </h3>
-                      <p>India
-                        06:30 pm - 07:30 pm
-                        United Kingdom
-                        01:00 pm - 02:00 pm </p>
-                      <p>Study Nursing in UK</p>
-                      <a href="" className="bttn">Register</a>
                     </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className="news-bx" style={{ backgroundImage: `url('assets/images/news.jpg')` }}>
 
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="news-bx" style={{ backgroundImage: `url('assets/images/news.jpg')` }}>
+                      <div className="news-con">
+                        <h3>
+                          21 Mar
+                        </h3>
+                        <p>India
+                          06:30 pm - 07:30 pm
+                          United Kingdom
+                          01:00 pm - 02:00 pm </p>
+                        <p>Study Nursing in UK</p>
+                        <a href="" className="bttn">Register</a>
+                      </div>
 
-                    <div className="news-con">
-                      <h3>
-                        21 Mar
-                      </h3>
-                      <p>India
-                        06:30 pm - 07:30 pm
-                        United Kingdom
-                        01:00 pm - 02:00 pm </p>
-                      <p>Study Nursing in UK</p>
-                      <a href="" className="bttn">Register</a>
                     </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className="news-bx" style={{ backgroundImage: `url('assets/images/news.jpg')` }}>
 
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="news-bx" style={{ backgroundImage: `url('assets/images/news.jpg')` }}>
+                      <div className="news-con">
+                        <h3>
+                          21 Mar
+                        </h3>
+                        <p>India
+                          06:30 pm - 07:30 pm
+                          United Kingdom
+                          01:00 pm - 02:00 pm </p>
+                        <p>Study Nursing in UK</p>
+                        <a href="" className="bttn">Register</a>
+                      </div>
 
-                    <div className="news-con">
-                      <h3>
-                        21 Mar
-                      </h3>
-                      <p>India
-                        06:30 pm - 07:30 pm
-                        United Kingdom
-                        01:00 pm - 02:00 pm </p>
-                      <p>Study Nursing in UK</p>
-                      <a href="" className="bttn">Register</a>
                     </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className="news-bx" style={{ backgroundImage: `url('assets/images/news.jpg')` }}>
 
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="news-bx" style={{ backgroundImage: `url('assets/images/news.jpg')` }}>
+                      <div className="news-con">
+                        <h3>
+                          21 Mar
+                        </h3>
+                        <p>India
+                          06:30 pm - 07:30 pm
+                          United Kingdom
+                          01:00 pm - 02:00 pm </p>
+                        <p>Study Nursing in UK</p>
+                        <a href="" className="bttn">Register</a>
+                      </div>
 
-                    <div className="news-con">
-                      <h3>
-                        21 Mar
-                      </h3>
-                      <p>India
-                        06:30 pm - 07:30 pm
-                        United Kingdom
-                        01:00 pm - 02:00 pm </p>
-                      <p>Study Nursing in UK</p>
-                      <a href="" className="bttn">Register</a>
                     </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className="news-bx" style={{ backgroundImage: `url('assets/images/news.jpg')` }}>
 
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="news-bx" style={{ backgroundImage: `url('assets/images/news.jpg')` }}>
+                      <div className="news-con">
+                        <h3>
+                          21 Mar
+                        </h3>
+                        <p>India
+                          06:30 pm - 07:30 pm
+                          United Kingdom
+                          01:00 pm - 02:00 pm </p>
+                        <p>Study Nursing in UK</p>
+                        <a href="" className="bttn">Register</a>
+                      </div>
 
-                    <div className="news-con">
-                      <h3>
-                        21 Mar
-                      </h3>
-                      <p>India
-                        06:30 pm - 07:30 pm
-                        United Kingdom
-                        01:00 pm - 02:00 pm </p>
-                      <p>Study Nursing in UK</p>
-                      <a href="" className="bttn">Register</a>
                     </div>
-
-                  </div>
-                </SwiperSlide>
+                  </SwiperSlide>
 
 
-              </Swiper>
-              
+                </Swiper>
+
               </div>
 
-              
+
 
             </div>
 

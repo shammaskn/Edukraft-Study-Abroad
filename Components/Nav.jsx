@@ -38,7 +38,13 @@ const Nav = () => {
                 <a href="">Countries</a>
                 <a href="">About</a>
               </div>
+
             </div>
+
+            <div className="menu">
+              <img src="/assets/icons/menu.svg" alt="" />
+            </div>
+
           </div>
         </div>
       </header>

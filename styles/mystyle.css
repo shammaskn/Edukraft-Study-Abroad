@@ -534,7 +534,8 @@ header.scrolled .logocol {
     transition: .3s;
     cursor: pointer;
 }
-.instabx:hover{
+
+.instabx:hover {
     box-shadow: rgba(0, 0, 0, 0.185) 0px 25px 20px -20px;
 }
 
@@ -581,6 +582,7 @@ footer {
 
 .foot-list {
     display: flex;
+    flex-flow: wrap;
 }
 
 .foot-left {
@@ -702,18 +704,114 @@ footer {
     z-index: 999;
 
 }
-.wha img{
+
+.wha img {
     animation: zoom-in-zoom-out 3s ease infinite;
 }
 
 @keyframes zoom-in-zoom-out {
     0% {
-      transform: scale(1, 1);
+        transform: scale(1, 1);
     }
+
     50% {
-      transform: scale(1.1, 1.1);
+        transform: scale(1.1, 1.1);
     }
+
     100% {
-      transform: scale(1, 1);
+        transform: scale(1, 1);
     }
-  }
+}
+
+.menu{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.menu img{
+    width: 38px;
+    background: #ff000014;
+    height: 38px;
+    padding: 8px;
+    border-radius: .3rem;
+}
+
+
+
+@media(max-width: 1199px) {
+    .abtlist li {
+        flex: 1 0 50%;
+    }
+    .sprt-list li {
+        flex: 1 0 calc(100% / 4);
+        max-width: calc(100% / 4);
+    }
+    footer .col {
+        flex: 1 0 50%;
+        max-width: 50%;
+        padding: 10px;
+    }
+    .foot-left img{
+        margin: auto;
+    }
+    
+}
+
+@media(min-width: 992px) {
+    .menu{
+        display: none;
+    }
+}
+
+@media(max-width: 991px) {
+    .menucol {
+        display: none;
+    
+    }
+    .sprt-list li {
+        flex: 1 0 calc(100% / 3);
+        max-width: calc(100% / 3);
+    }
+    footer{
+        display: grid;
+    }
+    .foot-left,.foot-right{
+        width: 100%;
+    }
+}
+
+@media(max-width: 767px) {
+    .sprt-list li {
+        flex: 1 0 calc(100% / 2);
+        max-width: calc(100% / 2);
+    }
+    .slideimg:before{
+        width: 100%;
+    }
+    .news-con{
+        max-width: 100%;
+    }
+    .slidercon{
+        padding: 0 15px;
+    }
+}
+
+@media(max-width: 575px) {
+    .abtlist li {
+        flex: 1 0 100%;
+    }
+    .abtlist .abtbox{
+        min-height: auto;
+    }
+    .sprtbak{
+        min-height: 200px;
+    }
+    .we-list li {
+        flex: 1 0 100%;
+        max-width: 100%;
+    }
+    .foot-right{
+        padding: 2rem;
+    }
+    
+}
