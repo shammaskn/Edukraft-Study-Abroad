@@ -200,7 +200,7 @@ const Home = () => {
                   slidesPerView: 2.5,
                 },
                 425: {
-                  slidesPerView: 2,
+                  slidesPerView: 1,
                 },
                 0: {
                   slidesPerView: 1,
@@ -278,7 +278,7 @@ const Home = () => {
                   slidesPerView: 2.5,
                 },
                 425: {
-                  slidesPerView: 2,
+                  slidesPerView: 1,
                 },
                 0: {
                   slidesPerView: 1,
@@ -610,7 +610,7 @@ const Home = () => {
                       slidesPerView: 2,
                     },
                     425: {
-                      slidesPerView: 2,
+                      slidesPerView: 1,
                     },
                     0: {
                       slidesPerView: 1,

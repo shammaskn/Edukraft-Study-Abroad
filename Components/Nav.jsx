@@ -6,6 +6,16 @@ import Image from "next/image";
 const Nav = () => {
 
   const [scrolled, setScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,6 +31,11 @@ const Nav = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [scrolled]);
+
+  const menuStyle = {
+    width: isOpen ? '60%' : '0',
+    transition: 'width 0.3s ease',
+  };
 
   return (
     <>
@@ -41,8 +56,21 @@ const Nav = () => {
 
             </div>
 
-            <div className="menu">
+            <div className="menu" onClick={toggleMenu}>
               <img src="/assets/icons/menu.svg" alt="" />
+            </div>
+
+            <div className="mobmenu" style={menuStyle}>
+              {/* Close button */}
+              <a className="close-btn" onClick={toggleMenu}>
+                <img src="/assets/icons/close.svg" alt="" />
+              </a>
+              <ul>
+                <li>Events</li>
+                <li>Courses</li>
+                <li>Countruies</li>
+                <li>About</li>
+              </ul>
             </div>
 
           </div>
