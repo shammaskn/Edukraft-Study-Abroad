@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+
 const Nav = () => {
 
   const [scrolled, setScrolled] = useState(false);
@@ -44,14 +45,17 @@ const Nav = () => {
         <div className="container-fluid cmpad">
           <div className="headmain">
             <div className="logocol">
+              <a href="/">
+
               <img src="/assets/logo/logo.svg" alt="" />
+              </a>
             </div>
             <div className="menucol">
               <div className="menulist">
-                <a href="">Events</a>
+              <Link href="/events">Events</Link>
                 <a href="">Courses</a>
-                <a href="">Countries</a>
-                <a href="">About</a>
+                <a href="/service">Services</a>
+                <Link href="/about">About</Link>
               </div>
 
             </div>
@@ -66,17 +70,15 @@ const Nav = () => {
                 <img src="/assets/icons/close.svg" alt="" />
               </a>
               <ul>
-                <li>Events</li>
-                <li>Courses</li>
-                <li>Countruies</li>
-                <li>About</li>
+                <Link onClick={()=>setIsOpen(false)} href="/events"><li>Events</li></Link>
+                <Link onClick={()=>setIsOpen(false)} href=""><li>Courses</li></Link>
+                <Link onClick={()=>setIsOpen(false)} href="/service"><li>Services</li></Link>
+                <Link onClick={()=>setIsOpen(false)} href=""><li>About</li></Link>
               </ul>
             </div>
-
           </div>
         </div>
       </header>
-
     </>
   );
 };

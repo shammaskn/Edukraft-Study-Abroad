@@ -3,29 +3,47 @@ import Image from "next/image";
 import Nav from "@Components/Nav";
 import Section from "@Components/section";
 // core version + navigation, pagination modules:
-import { Autoplay, Pagination, EffectFade, Navigation } from 'swiper/modules';
+import { Autoplay, Pagination, EffectFade, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import Swiper and modules styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/effect-fade';
-import 'swiper/css/navigation';
-
-import React, { useState, useEffect } from 'react';
-
-
-
-
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/effect-fade";
+import "swiper/css/navigation";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import { Modal } from "reactstrap";
+import { faRectangleXmark } from "@fortawesome/free-solid-svg-icons";
+import Modal1 from "./Modal"
 const Home = () => {
-
+  const [popupView, setPopupView] = useState(false);
 
   return (
-
     <>
+      <Modal
+        show={popupView}
+        isOpen={popupView}
+        toggle={() => setPopupView(!popupView)}
+        size="md"
+        centered={true}
+      >
+        
+        <div onClick={()=>setPopupView(false)} style={{ display:"flex", justifyContent:"end" ,paddingTop:"15px",cursor:"pointer" }}>
+          {/* <div className="modal-title">
+            <h5>Applied Details</h5>
+          </div> */}
+            <img src="/assets/icons/plus.png" alt="" />
+
+         
+        </div>
+<Modal1/>
+
+      </Modal>
       <div className="slider">
         <Swiper
           spaceBetween={30}
-          effect={'fade'}
+          effect={"fade"}
           // pagination={{
           //   clickable: true,
           // }}
@@ -39,42 +57,95 @@ const Home = () => {
           className="mySwiper"
         >
           <SwiperSlide>
-            <div className="slideimg" style={{ backgroundImage: `url(/assets/slider/slide1.jpg)` }}>
+            <div
+              className="slideimg"
+              style={{ backgroundImage: `url(/assets/slider/slide1.jpg)` }}
+            >
               <div className="row">
                 <div className="col-sm-6"></div>
                 <div className="col-sm-12 col-md-6 cmpad">
                   <div className="slidercon">
                     <h2>Fulfil your Career Ambitions!</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, dolore? Similique temporibus porro dolorum minus quae et laborum aperiam natus cupiditate, sapiente, aliquid animi, atque ex! Unde consequuntur quasi voluptatem?</p>
-                    <a href="" className="bttn">Book Your Free Consultation</a>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Doloribus, dolore? Similique temporibus porro dolorum
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Doloribus, dolore? Similique temporibus porro dolorum
+                     
+                    </p>
+                    <button
+                    style={{pointer:"cursor"}}
+                      onClick={() => {
+                        setPopupView(true);
+                      }}
+                      className="bttn"
+                    >
+                      Book Your Free Consultation
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="slideimg" style={{ backgroundImage: `url(/assets/slider/slide2.jpg)` }}>
+            <div
+              className="slideimg"
+              style={{ backgroundImage: `url(/assets/slider/slide2.jpg)` }}
+            >
               <div className="row">
                 <div className="col-sm-6"></div>
                 <div className="col-sm-12 col-md-6 cmpad">
                   <div className="slidercon">
-                    <h2>95% of our students got admission in less than 14 days</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, dolore? Similique temporibus porro dolorum minus quae et laborum aperiam natus cupiditate, sapiente, aliquid animi, atque ex! Unde consequuntur quasi voluptatem?</p>
-                    <a href="" className="bttn">Book Your Free Consultation</a>
+                    <h2>
+                      95% of our students got admission in less than 14 days
+                    </h2>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Doloribus, dolore? Similique temporibus porro dolorum
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Doloribus, dolore? Similique temporibus porro dolorum
+                     
+                    </p>
+                    <button
+                    style={{pointer:"cursor"}}
+                      onClick={() => {
+                        setPopupView(true);
+                      }}
+                      className="bttn"
+                    >
+                      Book Your Free Consultation
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="slideimg" style={{ backgroundImage: `url(/assets/slider/slide3.jpg)` }}>
+            <div
+              className="slideimg"
+              style={{ backgroundImage: `url(/assets/slider/slide3.jpg)` }}
+            >
               <div className="row">
                 <div className="col-sm-6"></div>
                 <div className="col-sm-12 col-md-6 cmpad">
                   <div className="slidercon">
                     <h2>Turn your dream of studying abroad a reality</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, dolore? Similique temporibus porro dolorum minus quae et laborum aperiam natus cupiditate, sapiente, aliquid animi, atque ex! Unde consequuntur quasi voluptatem?</p>
-                    <a href="" className="bttn">Book Your Free Consultation</a>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Doloribus, dolore? Similique temporibus porro dolorum
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Doloribus, dolore? Similique temporibus porro dolorum
+                 
+                    </p>
+                    <button
+                    style={{pointer:"cursor"}}
+                      onClick={() => {
+                        setPopupView(true);
+                      }}
+                      className="bttn"
+                    >
+                      Book Your Free Consultation
+                    </button>
                   </div>
                 </div>
               </div>
@@ -83,19 +154,20 @@ const Home = () => {
         </Swiper>
       </div>
 
-
       <div className="container-fluid cmpad py-5">
         <div className="row">
           <div className="col-sm-12">
             <h1 className="mainhead">Hello, We Are Edukraft</h1>
             <p className="subpara pb-3">Your Trusted Learning Partner</p>
 
-
             <ul className="abtlist">
               <li>
                 <div className="abtbox">
                   <h3>10+</h3>
-                  <p>Years experience helping students find their study find their study abroad destination</p>
+                  <p>
+                    Years experience helping students find their study find
+                    their study abroad destination
+                  </p>
                 </div>
               </li>
               <li>
@@ -117,38 +189,46 @@ const Home = () => {
                 </div>
               </li>
             </ul>
-
           </div>
         </div>
       </div>
-
-
 
       <div className="we-offer">
         <div className="container-fluid cmpad py-5">
           <div className="row abt mt-3">
             <div className="col-xl-6 mb-3 mb-xl-0 flexVcenter">
-
               <h2 className="mainhead">What we offer?</h2>
-              <p className="">We are here to take your burden and help you achieve your goals without worrying. We have designed our services, keeping your ease and convenience in mind. Our expert and qualified team will provide you with any services that a student can need, from complete advice and guidance about your education options and routs applications, visa services, transportation arrangements and accommodation arrangements if needed.</p>
+              <p className="">
+                We are here to take your burden and help you achieve your goals
+                without worrying. We have designed our services, keeping your
+                ease and convenience in mind. Our expert and qualified team will
+                provide you with any services that a student can need, from
+                complete advice and guidance about your education options and
+                routs applications, visa services, transportation arrangements
+                and accommodation arrangements if needed.
+              </p>
 
-              <a href="" className="arr">Read More <img src="/assets/icons/arrow.svg" alt="" /> </a>
-
+              <Link href="/service" className="arr">
+                Read More <img src="/assets/icons/arrow.svg" alt="" />{" "}
+              </Link>
             </div>
             <div className="col-xl-6">
-
-
               <ul className="we-list">
                 <li>
                   <div className="we-box">
                     <img src="/assets/icons/f1.svg" alt="" />
-                    <p>Curated selection of programmes from partner Universities</p>
+                    <p>
+                      Curated selection of programmes from partner Universities
+                    </p>
                   </div>
                 </li>
                 <li>
                   <div className="we-box">
                     <img src="/assets/icons/f2.svg" alt="" />
-                    <p>Guidance on choosing courses, countries and universities from experts</p>
+                    <p>
+                      Guidance on choosing courses, countries and universities
+                      from experts
+                    </p>
                   </div>
                 </li>
                 <li>
@@ -159,43 +239,33 @@ const Home = () => {
                 </li>
                 <li>
                   <div className="we-box">
-                    <img src="/assets/icons/f4.svg" alt="" />
+                    <img src="/assets/icons/f5.svg" alt="" />
                     <p>Editing and Processing Application Guidelines</p>
                   </div>
                 </li>
-
-
               </ul>
-
-
             </div>
           </div>
         </div>
       </div>
 
-
-
-
-
       <div className="container-fluid cmpad py-5">
         <div className="row">
           <div className="col-sm-12">
             <h1 className="mainhead">Top Study Destinations</h1>
-            <p className="subpara pb-3">Our partnerships extend to more than 100 prestigious educational institutions across five countries.</p>
-
+            <p className="subpara pb-3">
+              Our partnerships extend to more than 100 prestigious educational
+              institutions across five countries.
+            </p>
 
             <Swiper
-
               spaceBetween={30}
               centeredSlides={true}
               autoplay={{
                 delay: 2500,
                 disableOnInteraction: false,
               }}
-
               breakpoints={{
-
-
                 1200: {
                   slidesPerView: 2.5,
                 },
@@ -206,15 +276,10 @@ const Home = () => {
                   slidesPerView: 1,
                 },
               }}
-
-
               speed={1500}
               loop={true}
               navigation={true}
               modules={[Autoplay, Navigation]}
-
-
-
             >
               <SwiperSlide>
                 <div className="study">
@@ -247,17 +312,14 @@ const Home = () => {
                 </div>
               </SwiperSlide>
             </Swiper>
-
           </div>
         </div>
       </div>
-
 
       <div className="container-fluid cmpad py-5">
         <div className="row">
           <div className="col-sm-12">
             <h1 className="mainhead pb-3">Discover Top Rated Universities</h1>
-
 
             <Swiper
               slidesPerView={2.5}
@@ -272,8 +334,6 @@ const Home = () => {
               navigation={true}
               modules={[Autoplay, Navigation]}
               breakpoints={{
-
-
                 1200: {
                   slidesPerView: 2.5,
                 },
@@ -284,7 +344,6 @@ const Home = () => {
                   slidesPerView: 1,
                 },
               }}
-
             >
               <SwiperSlide>
                 <div className="study">
@@ -322,25 +381,21 @@ const Home = () => {
                   <p>University of Chester</p>
                 </div>
               </SwiperSlide>
-
             </Swiper>
-
           </div>
           <div className="col-sm-12 mt-5 d-flex justify-content-end">
-            <a href="" className="bttn">Explore More</a>
+            <a href="" className="bttn">
+              Explore More
+            </a>
           </div>
         </div>
       </div>
-
-
-
 
       <div className="testimonials">
         <div className="container-fluid cmpad py-5">
           <div className="row">
             <div className="col-sm-12">
               <h1 className="mainhead pb-3">Hear from Our Students!</h1>
-
 
               <Swiper
                 slidesPerView={1}
@@ -360,13 +415,23 @@ const Home = () => {
                       <div className="testi-img">
                         <img src="assets/testimonials/testi1.jpg" alt="" />
 
-                        <img src="assets/icons/play.svg" alt="" className="play" />
+                        <img
+                          src="assets/icons/play.svg"
+                          alt=""
+                          className="play"
+                        />
 
                         <p>Zerin, UK</p>
                       </div>
                     </div>
                     <div className="col-md-6 flexVcenter">
-                      <p className="testipara">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”</p>
+                      <p className="testipara">
+                        “Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis
+                        nostrud exercitation ullamco laboris nisi ut aliquip ex
+                        ea commodo consequat.”
+                      </p>
                       <h6>-Zerin, UK</h6>
                     </div>
                   </div>
@@ -377,13 +442,23 @@ const Home = () => {
                       <div className="testi-img">
                         <img src="assets/testimonials/testi1.jpg" alt="" />
 
-                        <img src="assets/icons/play.svg" alt="" className="play" />
+                        <img
+                          src="assets/icons/play.svg"
+                          alt=""
+                          className="play"
+                        />
 
                         <p>Zerin, UK</p>
                       </div>
                     </div>
                     <div className="col-md-6 flexVcenter">
-                      <p className="testipara">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”</p>
+                      <p className="testipara">
+                        “Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis
+                        nostrud exercitation ullamco laboris nisi ut aliquip ex
+                        ea commodo consequat.”
+                      </p>
                       <h6>-Zerin, UK</h6>
                     </div>
                   </div>
@@ -394,13 +469,23 @@ const Home = () => {
                       <div className="testi-img">
                         <img src="assets/testimonials/testi1.jpg" alt="" />
 
-                        <img src="assets/icons/play.svg" alt="" className="play" />
+                        <img
+                          src="assets/icons/play.svg"
+                          alt=""
+                          className="play"
+                        />
 
                         <p>Zerin, UK</p>
                       </div>
                     </div>
                     <div className="col-md-6 flexVcenter">
-                      <p className="testipara">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”</p>
+                      <p className="testipara">
+                        “Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis
+                        nostrud exercitation ullamco laboris nisi ut aliquip ex
+                        ea commodo consequat.”
+                      </p>
                       <h6>-Zerin, UK</h6>
                     </div>
                   </div>
@@ -411,38 +496,59 @@ const Home = () => {
                       <div className="testi-img">
                         <img src="assets/testimonials/testi1.jpg" alt="" />
 
-                        <img src="assets/icons/play.svg" alt="" className="play" />
+                        <img
+                          src="assets/icons/play.svg"
+                          alt=""
+                          className="play"
+                        />
 
                         <p>Zerin, UK</p>
                       </div>
                     </div>
                     <div className="col-md-6 flexVcenter">
-                      <p className="testipara">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”</p>
+                      <p className="testipara">
+                        “Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis
+                        nostrud exercitation ullamco laboris nisi ut aliquip ex
+                        ea commodo consequat.”
+                      </p>
                       <h6>-Zerin, UK</h6>
                     </div>
                   </div>
                 </SwiperSlide>
-
               </Swiper>
-
             </div>
-
           </div>
         </div>
       </div>
 
-
-
-
-
       <div className="container-fluid cmpad py-5">
         <div className="row">
           <div className="col-sm-12">
-            <h1 className="mainhead pb-3">We will support you every step of the way</h1>
+            <h1 className="mainhead pb-3 nonemainhead">
+              We will support you every step of the way
+            </h1>
 
-            <ul className="sprt-list">
+            <ul className="sprt-list ">
+              <li className="sprt-list1">
+                <div
+                  className="sprtbak1"
+                  
+                >
+                  <div className="sprtcon">
+                    
+                    <p>We're here to back you up through every single step.</p>
+                  </div>
+                </div>
+              </li>
               <li>
-                <div className="sprtbak" style={{ backgroundImage: `url(../assets/images/sprtbak1.jpg)` }}>
+                <div
+                  className="sprtbak"
+                  style={{
+                    backgroundImage: `url(../assets/images/sprtbak1.jpg)`,
+                  }}
+                >
                   <div className="sprtcon">
                     <img src="/assets/icons/sprt1.svg" alt="" />
                     <p>Partnering with your school</p>
@@ -450,7 +556,12 @@ const Home = () => {
                 </div>
               </li>
               <li>
-                <div className="sprtbak" style={{ backgroundImage: `url(../assets/images/sprtbak1.jpg)` }}>
+                <div
+                  className="sprtbak"
+                  style={{
+                    backgroundImage: `url(../assets/images/sprtbak1.jpg)`,
+                  }}
+                >
                   <div className="sprtcon">
                     <img src="/assets/icons/sprt2.svg" alt="" />
                     <p>Selecting the Right Program</p>
@@ -458,7 +569,12 @@ const Home = () => {
                 </div>
               </li>
               <li>
-                <div className="sprtbak" style={{ backgroundImage: `url(../assets/images/sprtbak1.jpg)` }}>
+                <div
+                  className="sprtbak"
+                  style={{
+                    backgroundImage: `url(../assets/images/sprtbak1.jpg)`,
+                  }}
+                >
                   <div className="sprtcon">
                     <img src="/assets/icons/sprt3.svg" alt="" />
                     <p>Applying and the Process</p>
@@ -466,7 +582,12 @@ const Home = () => {
                 </div>
               </li>
               <li>
-                <div className="sprtbak" style={{ backgroundImage: `url(../assets/images/sprtbak1.jpg)` }}>
+                <div
+                  className="sprtbak"
+                  style={{
+                    backgroundImage: `url(../assets/images/sprtbak1.jpg)`,
+                  }}
+                >
                   <div className="sprtcon">
                     <img src="/assets/icons/sprt4.svg" alt="" />
                     <p>Funding and Scholarships</p>
@@ -474,7 +595,12 @@ const Home = () => {
                 </div>
               </li>
               <li>
-                <div className="sprtbak" style={{ backgroundImage: `url(../assets/images/sprtbak1.jpg)` }}>
+                <div
+                  className="sprtbak"
+                  style={{
+                    backgroundImage: `url(../assets/images/sprtbak1.jpg)`,
+                  }}
+                >
                   <div className="sprtcon">
                     <img src="/assets/icons/sprt5.svg" alt="" />
                     <p>Preparing for your adventure</p>
@@ -482,26 +608,16 @@ const Home = () => {
                 </div>
               </li>
             </ul>
-
-
           </div>
-
         </div>
       </div>
-
-
-
-
-
 
       <div className="container-fluid cmpad py-5 insta">
         <div className="row">
           <div className="col-sm-12">
             <h1 className="mainhead pb-3">Check out our Instagram page</h1>
 
-
             <Swiper
-
               spaceBetween={15}
               autoplay={{
                 delay: 1000,
@@ -513,10 +629,7 @@ const Home = () => {
               loop={true}
               navigation={true}
               modules={[Autoplay, Navigation]}
-
               breakpoints={{
-
-
                 1200: {
                   slidesPerView: 3.9,
                 },
@@ -533,8 +646,6 @@ const Home = () => {
                   slidesPerView: 1,
                 },
               }}
-
-
             >
               <SwiperSlide>
                 <div className="instabx">
@@ -566,16 +677,10 @@ const Home = () => {
                   <img src="/assets/images/in3.jpg" alt="" />
                 </div>
               </SwiperSlide>
-
-
             </Swiper>
-
           </div>
-
         </div>
       </div>
-
-
 
       <div className="testimonials">
         <div className="container-fluid cmpad py-5">
@@ -583,11 +688,8 @@ const Home = () => {
             <div className="col-sm-12">
               <h1 className="mainhead pb-3">Upcoming Events</h1>
 
-
               <div className="swiper-container">
-
                 <Swiper
-
                   spaceBetween={0}
                   autoplay={{
                     delay: 1500,
@@ -599,10 +701,7 @@ const Home = () => {
                   loop={true}
                   navigation={true}
                   modules={[Autoplay, Navigation]}
-
                   breakpoints={{
-
-
                     1200: {
                       slidesPerView: 2.5,
                     },
@@ -618,162 +717,171 @@ const Home = () => {
                   }}
                 >
                   <SwiperSlide>
-                    <div className="news-bx" style={{ backgroundImage: `url('assets/images/news.jpg')` }}>
-
+                    <div
+                      className="news-bx"
+                      style={{
+                        backgroundImage: `url('assets/images/news.jpg')`,
+                      }}
+                    >
                       <div className="news-con">
-                        <h3>
-                          21 Mar
-                        </h3>
-                        <p>India
-                          06:30 pm - 07:30 pm
-                          United Kingdom
-                          01:00 pm - 02:00 pm </p>
+                        <h3>21 Mar</h3>
+                        <p>
+                          India 06:30 pm - 07:30 pm United Kingdom 01:00 pm -
+                          02:00 pm{" "}
+                        </p>
                         <p>Study Nursing in UK</p>
-                        <a href="" className="bttn">Register</a>
+                        <a href="" className="bttn">
+                          Register
+                        </a>
                       </div>
-
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <div className="news-bx" style={{ backgroundImage: `url('assets/images/news.jpg')` }}>
-
+                    <div
+                      className="news-bx"
+                      style={{
+                        backgroundImage: `url('assets/images/news.jpg')`,
+                      }}
+                    >
                       <div className="news-con">
-                        <h3>
-                          21 Mar
-                        </h3>
-                        <p>India
-                          06:30 pm - 07:30 pm
-                          United Kingdom
-                          01:00 pm - 02:00 pm </p>
+                        <h3>21 Mar</h3>
+                        <p>
+                          India 06:30 pm - 07:30 pm United Kingdom 01:00 pm -
+                          02:00 pm{" "}
+                        </p>
                         <p>Study Nursing in UK</p>
-                        <a href="" className="bttn">Register</a>
+                        <a href="" className="bttn">
+                          Register
+                        </a>
                       </div>
-
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <div className="news-bx" style={{ backgroundImage: `url('assets/images/news.jpg')` }}>
-
+                    <div
+                      className="news-bx"
+                      style={{
+                        backgroundImage: `url('assets/images/news.jpg')`,
+                      }}
+                    >
                       <div className="news-con">
-                        <h3>
-                          21 Mar
-                        </h3>
-                        <p>India
-                          06:30 pm - 07:30 pm
-                          United Kingdom
-                          01:00 pm - 02:00 pm </p>
+                        <h3>21 Mar</h3>
+                        <p>
+                          India 06:30 pm - 07:30 pm United Kingdom 01:00 pm -
+                          02:00 pm{" "}
+                        </p>
                         <p>Study Nursing in UK</p>
-                        <a href="" className="bttn">Register</a>
+                        <a href="" className="bttn">
+                          Register
+                        </a>
                       </div>
-
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <div className="news-bx" style={{ backgroundImage: `url('assets/images/news.jpg')` }}>
-
+                    <div
+                      className="news-bx"
+                      style={{
+                        backgroundImage: `url('assets/images/news.jpg')`,
+                      }}
+                    >
                       <div className="news-con">
-                        <h3>
-                          21 Mar
-                        </h3>
-                        <p>India
-                          06:30 pm - 07:30 pm
-                          United Kingdom
-                          01:00 pm - 02:00 pm </p>
+                        <h3>21 Mar</h3>
+                        <p>
+                          India 06:30 pm - 07:30 pm United Kingdom 01:00 pm -
+                          02:00 pm{" "}
+                        </p>
                         <p>Study Nursing in UK</p>
-                        <a href="" className="bttn">Register</a>
+                        <a href="" className="bttn">
+                          Register
+                        </a>
                       </div>
-
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <div className="news-bx" style={{ backgroundImage: `url('assets/images/news.jpg')` }}>
-
+                    <div
+                      className="news-bx"
+                      style={{
+                        backgroundImage: `url('assets/images/news.jpg')`,
+                      }}
+                    >
                       <div className="news-con">
-                        <h3>
-                          21 Mar
-                        </h3>
-                        <p>India
-                          06:30 pm - 07:30 pm
-                          United Kingdom
-                          01:00 pm - 02:00 pm </p>
+                        <h3>21 Mar</h3>
+                        <p>
+                          India 06:30 pm - 07:30 pm United Kingdom 01:00 pm -
+                          02:00 pm{" "}
+                        </p>
                         <p>Study Nursing in UK</p>
-                        <a href="" className="bttn">Register</a>
+                        <a href="" className="bttn">
+                          Register
+                        </a>
                       </div>
-
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <div className="news-bx" style={{ backgroundImage: `url('assets/images/news.jpg')` }}>
-
+                    <div
+                      className="news-bx"
+                      style={{
+                        backgroundImage: `url('assets/images/news.jpg')`,
+                      }}
+                    >
                       <div className="news-con">
-                        <h3>
-                          21 Mar
-                        </h3>
-                        <p>India
-                          06:30 pm - 07:30 pm
-                          United Kingdom
-                          01:00 pm - 02:00 pm </p>
+                        <h3>21 Mar</h3>
+                        <p>
+                          India 06:30 pm - 07:30 pm United Kingdom 01:00 pm -
+                          02:00 pm{" "}
+                        </p>
                         <p>Study Nursing in UK</p>
-                        <a href="" className="bttn">Register</a>
+                        <a href="" className="bttn">
+                          Register
+                        </a>
                       </div>
-
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <div className="news-bx" style={{ backgroundImage: `url('assets/images/news.jpg')` }}>
-
+                    <div
+                      className="news-bx"
+                      style={{
+                        backgroundImage: `url('assets/images/news.jpg')`,
+                      }}
+                    >
                       <div className="news-con">
-                        <h3>
-                          21 Mar
-                        </h3>
-                        <p>India
-                          06:30 pm - 07:30 pm
-                          United Kingdom
-                          01:00 pm - 02:00 pm </p>
+                        <h3>21 Mar</h3>
+                        <p>
+                          India 06:30 pm - 07:30 pm United Kingdom 01:00 pm -
+                          02:00 pm{" "}
+                        </p>
                         <p>Study Nursing in UK</p>
-                        <a href="" className="bttn">Register</a>
+                        <a href="" className="bttn">
+                          Register
+                        </a>
                       </div>
-
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <div className="news-bx" style={{ backgroundImage: `url('assets/images/news.jpg')` }}>
-
+                    <div
+                      className="news-bx"
+                      style={{
+                        backgroundImage: `url('assets/images/news.jpg')`,
+                      }}
+                    >
                       <div className="news-con">
-                        <h3>
-                          21 Mar
-                        </h3>
-                        <p>India
-                          06:30 pm - 07:30 pm
-                          United Kingdom
-                          01:00 pm - 02:00 pm </p>
+                        <h3>21 Mar</h3>
+                        <p>
+                          India 06:30 pm - 07:30 pm United Kingdom 01:00 pm -
+                          02:00 pm{" "}
+                        </p>
                         <p>Study Nursing in UK</p>
-                        <a href="" className="bttn">Register</a>
+                        <a href="" className="bttn">
+                          Register
+                        </a>
                       </div>
-
                     </div>
                   </SwiperSlide>
-
-
                 </Swiper>
-
               </div>
-
-
-
             </div>
-
           </div>
         </div>
       </div>
-
-
-
-
-
-
-
-
     </>
   );
 };
